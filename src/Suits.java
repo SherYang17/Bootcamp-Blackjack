@@ -1,3 +1,5 @@
-public class Suits {
+// Enums
+
+public enum Suits {
     DIAMOND, HEART, SPADE, CLUB
 }
