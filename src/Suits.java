@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Suits {
+public class Suits {
+    DIAMOND, HEART, SPADE, CLUB
 }
