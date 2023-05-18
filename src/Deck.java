@@ -61,11 +61,11 @@ public class Deck {
 
         for (Card card : deck) { // Loop for each card in the deck
             Values cardValue = card.getValue(); // assign each card's getValue method from card class and assign it to variable
-            if (cardValue == Values.ACE) {      // if card is equal to text ACE
-                aces++;                         // +1
-                value = value + 11;             // or +11
-            } else if (cardValue == Values.JACK || cardValue == Values.QUEEN || cardValue == Values.KING) { // else J or Q or K
-                value = value + 10;             // +10 because J Q K are worth 10
+            if (cardValue == Values.ACE) {
+                aces++;
+                value = value + 11;
+            } else if (cardValue == Values.JACK || cardValue == Values.QUEEN || cardValue == Values.KING) {
+                value = value + 10;
             } else {
                 value = value + cardValue.ordinal() + 2;
             }
@@ -73,11 +73,11 @@ public class Deck {
 
         // Make Ace equal +1 if the hand value is greater than 21
         while (value > 21 && aces > 0) {
-            value = value - 10; // So if hand is +21 with Aces because the value is set at +11 + other card(s), then subtract 10 to make it
-            aces--; //decrement by 1
+            value = value - 10;
+            aces--;
         }
 
-        return value; // returns the entire value after the math works out
+        return value;
     }
 
     @Override
@@ -96,6 +96,17 @@ public class Deck {
         return cardList.toString();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 //    public String toString() {

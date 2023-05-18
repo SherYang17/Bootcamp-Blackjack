@@ -8,7 +8,10 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         Deck playingDeck = new Deck();
 
+        System.out.println("* * * * * * * * * * * * * * * * * * * * *");
         System.out.println("* * * * * Welcome to Blackjack!* * * * *");
+        System.out.println("* * * * * * * * * * * * * * * * * * * * *");
+        System.out.println(" ");
         System.out.print("Enter your Name: ");
         String playerName = scanner.next();
 
@@ -59,11 +62,11 @@ public class Game {
                     // Hit = 1
                     if (userChoice.equals("hit")) {
                         playerHand.addCard(playingDeck.draw());
-                        System.out.println(playerName + "'Played Card: " + playerHand);
+                        System.out.println(playerName + "'played Card: " + playerHand);
 
                         // Busts if over 21
                         if (playerHand.getHandValue() > 21) {
-                            System.out.println("Player busts! Dealer wins.");
+                            System.out.println(playerName + " busts! Dealer wins.");
                             gameIsOver = true;
                             balance = balance - bet;
                         }
@@ -77,14 +80,15 @@ public class Game {
                 } else {
                     System.out.println("Dealer's turn.");
                     System.out.println("Dealer's Hand: " + dealerHand);
-
                     suspense();
 
 
                     // Dealer keeps hitting until hand value is 18 or higher
                     while (dealerHand.getHandValue() < 17 || dealerHand.getHandValue() < playerHand.getHandValue()) {
                         dealerHand.addCard(playingDeck.draw());
-                        System.out.println("Dealer hits. Dealer's Hand: " + dealerHand);
+                        System.out.println("Dealer hits.");
+                        System.out.println("Dealer's Hand: " + dealerHand);
+                        suspense();
                     }
 
 
@@ -142,7 +146,7 @@ public static int getBetAmount (Scanner scanner) {
 
     public static boolean playAgain(int balance, Scanner scanner) {
         // After a round ends, ask if the user wants to play again
-        System.out.println("Your current balance is: " + balance);
+        System.out.println("Your current balance is now " + balance);
         System.out.println(" ");
         System.out.println("Do you want to play again? Yes/No");
         String playAgain = scanner.next().toLowerCase();
@@ -161,7 +165,7 @@ public static int getBetAmount (Scanner scanner) {
     }
 
     public static void closingMessage (int balance, int originalValue){
-        System.out.println("Thank you for playing at Sher's Casino. ");
+
         System.out.println("You came in originally with $" + originalValue);
 
         int totalProfit = originalValue - balance;
@@ -170,10 +174,12 @@ public static int getBetAmount (Scanner scanner) {
             System.out.println("Your account balance is negative: $" + balance);
             System.out.println("You reach into your pockets and realize you didn't bring your wallet.");
             System.out.println("Unfortunately, the police have been called.");
+            System.out.println("Joking aside, please do not gamble more than what you can afford.");
         } else {
             System.out.println("Your account balance is: $" + balance);
 //            System.out.println("You made a profit of: " + totalProfit);
         }
+        System.out.println("Thank you for playing at Sher's Casino. Have a great day! ");
     }
 
 
@@ -195,7 +201,16 @@ public static int getBetAmount (Scanner scanner) {
 
 
 
-//
+
+
+
+
+
+
+
+
+
+// Wished I could've added more lines from the psvm into methods to make it cleaner.
 // why does this statement not work? I've added scanner after the int but it skips over it
 //        System.out.println("Bets are 5, 10, 50, and 100");
 //        System.out.print("Place your bet: ");
@@ -213,14 +228,3 @@ public static int getBetAmount (Scanner scanner) {
 //        }
 //        }
 //
-//        scanner.nextLine();
-//        System.out.println(" ");
-
-
-
-
-
-
-//                    System.out.println("1. Hit");
-//                    System.out.println("2. Stand");
-//                    int choice = scanner.nextInt(); // Player Choice
