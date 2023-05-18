@@ -1,9 +1,9 @@
 BlackJack
 =========
-Welcome to Sher's Java BlackJack game! 
-Hope you enjoy your stay and have fun!
-I am a solo developer working hard to bring the best games to you!
-Support me by donating to my email at "IAmJustKiddingPleaseDont@madeupemail.com". 
+Welcome to Sher's Java BlackJack game! <br />
+Hope you enjoy your stay and have fun! <br />
+I am a solo developer working hard to bring the best games to you! <br />
+Support me by donating to my email at "IAmJustKiddingPleaseDont@madeupemail.com".  <br />
 
 
 ### Sample Output 1
