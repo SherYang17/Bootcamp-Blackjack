@@ -9,7 +9,7 @@ public class Game {
         Deck playingDeck = new Deck();
 
         System.out.println("* * * * * * * * * * * * * * * * * * * * *");
-        System.out.println("* * * * * Welcome to Blackjack!* * * * *");
+        System.out.println("* * * * * Welcome to BlackJack!* * * * *");
         System.out.println("* * * * * * * * * * * * * * * * * * * * *");
         System.out.println(" ");
         System.out.print("Enter your Name: ");
