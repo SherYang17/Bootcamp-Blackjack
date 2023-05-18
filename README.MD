@@ -2,7 +2,6 @@ BlackJack
 =========
 
 ### Sample Output 1
-=========
 ```
 * * * * * * * * * * * * * * * * * * * * *
 * * * * * Welcome to Blackjack!* * * * *
