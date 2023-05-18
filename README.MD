@@ -7,7 +7,7 @@ BlackJack
 * * * * * Welcome to Blackjack!* * * * *
 * * * * * * * * * * * * * * * * * * * * *
  
-Enter your Name: Sherly
+Enter your name: Sherly
 Enter your balance: 50
 Bets are 5, 10, 50, and 100
 Place your bet: 100
@@ -19,7 +19,7 @@ Dealer's Hand: FIVE-♠, [Hidden Card]
 Do you want to Hit or Stand?
 Hit
  
-Sherly'played Card: SEVEN-♥, SIX-♦, TEN-♣
+Sherly played card: SEVEN-♥, SIX-♦, TEN-♣
 Sherly busts! Dealer wins.
 Your current balance is now -50
  
@@ -45,7 +45,7 @@ Process finished with exit code 0
 * * * * * Welcome to Blackjack!* * * * *
 * * * * * * * * * * * * * * * * * * * * *
  
-Enter your Name: Sher
+Enter your name: Sher
 Enter your balance: 200
 Bets are 5, 10, 50, and 100
 Place your bet: 100
