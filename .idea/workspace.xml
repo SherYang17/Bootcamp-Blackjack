@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a97a817f-6a1b-4bfd-9e64-c3607c3c87c0" name="Changes" comment="Made some subtle fixes here and there. Wish I could've organized the psvm more but utilizing methods and having the content go in there." />
+    <list default="true" id="a97a817f-6a1b-4bfd-9e64-c3607c3c87c0" name="Changes" comment="Capitalized the J in Blackjack" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684255183929</updated>
-      <workItem from="1684255185046" duration="39041000" />
+      <workItem from="1684255185046" duration="39348000" />
     </task>
     <task id="LOCAL-00001" summary="Uploading work">
       <created>1684256367903</created>
@@ -89,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684376523570</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Capitalized the J in Blackjack">
+      <created>1684376936126</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684376936126</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +107,7 @@
     <MESSAGE value="First Commit with base code" />
     <MESSAGE value="Uploading Blackjack assignment" />
     <MESSAGE value="Made some subtle fixes here and there. Wish I could've organized the psvm more but utilizing methods and having the content go in there." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some subtle fixes here and there. Wish I could've organized the psvm more but utilizing methods and having the content go in there." />
+    <MESSAGE value="Capitalized the J in Blackjack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Capitalized the J in Blackjack" />
   </component>
 </project>

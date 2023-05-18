@@ -12,7 +12,7 @@ public class Game {
         System.out.println("* * * * * Welcome to BlackJack!* * * * *");
         System.out.println("* * * * * * * * * * * * * * * * * * * * *");
         System.out.println(" ");
-        System.out.print("Enter your Name: ");
+        System.out.print("Enter your name: ");
         String playerName = scanner.next();
 
         System.out.print("Enter your balance: ");
@@ -62,7 +62,7 @@ public class Game {
                     // Hit = 1
                     if (userChoice.equals("hit")) {
                         playerHand.addCard(playingDeck.draw());
-                        System.out.println(playerName + "'played Card: " + playerHand);
+                        System.out.println(playerName + " played card: " + playerHand);
 
                         // Busts if over 21
                         if (playerHand.getHandValue() > 21) {
