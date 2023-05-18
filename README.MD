@@ -1,6 +1,6 @@
 BlackJack
 =========
-Welcome to Sher's Java BlackJack game! <br />
+Welcome to Sher's Java BlackJack game! <br /><br />
 Hope you enjoy your stay and have fun! <br />
 I am a solo developer working hard to bring the best games to you! <br />
 Support me by donating to my email at "IAmJustKiddingPleaseDont@madeupemail.com".  <br />
