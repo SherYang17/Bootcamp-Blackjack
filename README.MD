@@ -2,7 +2,7 @@ BlackJack
 =========
 
 ### Sample Output 1
-...
+```
 * * * * * * * * * * * * * * * * * * * * *
 * * * * * Welcome to Blackjack!* * * * *
 * * * * * * * * * * * * * * * * * * * * *
@@ -34,13 +34,13 @@ Joking aside, please do not gamble more than what you can afford.
 Thank you for playing at Sher's Casino. Have a great day! 
 
 Process finished with exit code 0
-..
+```
 
 
 
 
 ### Sample Output 2
-...
+```
 * * * * * * * * * * * * * * * * * * * * *
 * * * * * Welcome to Blackjack!* * * * *
 * * * * * * * * * * * * * * * * * * * * *
@@ -63,3 +63,13 @@ Dealer hits.
 Dealer's Hand: FOUR-♣, KING-♥, FIVE-♦
 Dealer wins!
 Your current balance is now 100
+ 
+Do you want to play again? Yes/No
+no
+ 
+You came in originally with $200
+Your account balance is: $100
+Thank you for playing at Sher's Casino. Have a great day! 
+
+Process finished with exit code 0
+```
