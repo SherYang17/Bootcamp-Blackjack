@@ -6,11 +6,13 @@ public class Card {
 
     // create arrays for values and suits - need these to generate random cards
     private Values[] values = Values.values();
-    private Random randomValues = new Random();
     private Suits[] suits = Suits.values();
+    private Random randomValues = new Random();
     private Random randomSuits = new Random();
 
-    public Card(Suits suit, Values value) {
+
+    // Constructor here, going to pass the 2 values thru here
+    public Card(Values value, Suits suit) {
         this.value = value;
         this.suit = suit;
     }
@@ -21,13 +23,18 @@ public class Card {
         this.value = getRandomValue();
     }
 
+
+    // This combines heart,diamond,clover,spade with the 2,3,4,5,6,7,8,9,10,j,q,k,a
+    // Use getSymbol() method since suit text was converted to symbols
     public String toString() {
-        return this.suit.toString() + "-" + this.value.toString();
+        return  this.value.toString() + "-" + this.suit.getSymbol();
     }
 
+    // This returns the 2,3,4,5,6,7,8,9,10,J,Q,K,A
     public Values getValue() {
         return this.value;
     }
+
 
     public Values getRandomValue() {
         return values[randomValues.nextInt(values.length)];

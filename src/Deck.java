@@ -9,19 +9,23 @@ public class Deck {
     }
 
     public void createFullDeck() {
-        // generate cards
-
+        // 13:51 https://www.youtube.com/watch?v=xLhgqPUHoVs&t=2s
+        for (Values cardValue : Values.values()) {  // loop into enum class Values
+             for (Suits cardSuit : Suits.values()) { // loop into enum class Suits
+                this.deck.add(new Card(cardValue, cardSuit)); // add those into our current deck
+            }
+        }
     }
 
-    public void shuffleDeck(){
-        Collections.shuffle(deck);
+    public void shuffleDeck() {
+        Collections.shuffle(deck); // utilize Collections shuffle() method
     }
 
-    public Card getCard(int i){
+    public Card getCard(int i) {
         return this.deck.get(i);
     }
 
-    public void removeCard(int i){
+    public void removeCard(int i) {
         this.deck.remove(i);
     }
 
@@ -29,20 +33,90 @@ public class Deck {
         this.deck.add(addCard);
     }
 
-    // Get the size of the deck
     public int deckSize() {
         return this.deck.size();
     }
 
-    // Draws from the deck
-    public void draw(Deck comingFrom) {
-
+    public Card draw() {
+        Card card = getCard(0);
+        removeCard(0);
+        return card;
     }
 
-    // This will move cards back into the deck to continue playing
     public void moveAllToDeck(Deck moveTo) {
+        int deckSize = this.deck.size();
 
+        for (int i = 0; i < deckSize; i++) {
+            moveTo.addCard(this.getCard(i));
+        }
+
+        for (int i = 0; i < deckSize; i++) {
+            this.removeCard(0);
+        }
     }
 
+    public int getHandValue() {
+        int value = 0;
+        int aces = 0;
 
+        for (Card card : deck) { // Loop for each card in the deck
+            Values cardValue = card.getValue(); // assign each card's getValue method from card class and assign it to variable
+            if (cardValue == Values.ACE) {      // if card is equal to text ACE
+                aces++;                         // +1
+                value = value + 11;             // or +11
+            } else if (cardValue == Values.JACK || cardValue == Values.QUEEN || cardValue == Values.KING) { // else J or Q or K
+                value = value + 10;             // +10 because J Q K are worth 10
+            } else {
+                value = value + cardValue.ordinal() + 2;
+            }
+        }
+
+        // Make Ace equal +1 if the hand value is greater than 21
+        while (value > 21 && aces > 0) {
+            value = value - 10; // So if hand is +21 with Aces because the value is set at +11 + other card(s), then subtract 10 to make it
+            aces--; //decrement by 1
+        }
+
+        return value; // returns the entire value after the math works out
+    }
+
+    @Override
+
+    // put everything together and separate it by commas
+    public String toString() {
+        StringBuilder cardList = new StringBuilder();
+
+        for (int i = 0; i < deck.size(); i++) {
+            cardList.append(deck.get(i).toString());
+
+            if (i < deck.size() - 1) {
+                cardList.append(", ");
+            }
+        }
+        return cardList.toString();
+    }
 }
+
+
+//    public String toString() {
+//        String cardList = "";
+//
+//        for (Card card : this.deck) {
+//            cardList += card.toString() + "\n";
+//        }
+//
+//        return cardList;
+//    }
+
+
+
+
+
+//
+//    public void createFullDeck() {
+//        for (Suits cardSuit : Suits.values()) {
+//            for (Values cardValue : Values.values()) {
+//                this.deck.add(new Card(cardSuit, cardValue));
+//            }
+//        }
+//    }
