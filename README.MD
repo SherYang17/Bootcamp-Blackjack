@@ -79,7 +79,7 @@ Thank you for playing at Sher's Casino. Have a great day!
 Process finished with exit code 0
 ```
 
-Overview:
+### Overview:
 You will create the game of Blackjack that can be played inside your command line.
 
  
